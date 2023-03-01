@@ -23,3 +23,42 @@ int getCountryPhoneCount(String code, List<String> phones) {
   return catchPhones.length;
 }
 
+//Conditional IF-ELSE !!
+Araba araba1 = Araba("Mercedes", "sedan", false, "G63", null, null, null);
+  print(
+     " Marka: ${araba1.brand}\n Model: ${araba1.model}\n Sunroof: ${araba1.sunRoof ? "Var" : "Yok"}\n Top Speed: ${araba1.horsePower == null ? "Girilmedi" : araba1.horsePower! * 2}");
+
+class Araba {
+  String brand;
+  String model;
+  double? horsePower;
+  String? bodyType;
+  bool sunRoof;
+  String? gear;
+  List<String>? extension;
+  
+  Araba(
+    this.brand,
+    this.bodyType,
+    this.sunRoof,
+    this.model, [
+    this.extension,
+    this.gear,
+    this.horsePower,
+  ]);
+}
+
+// SWITCH-CASE
+  String zaman = "morning";
+  switch (zaman) {
+    case "morning":
+      print("Good Morning");
+      break;
+    case "afternoon":
+      print("Have a Nice Day");
+      break;
+    case "night":
+      print("Good Night");
+      break;
+    default:
+  }
